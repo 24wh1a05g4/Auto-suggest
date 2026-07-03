@@ -1,22 +1,15 @@
 h1{
     color: red;
 }
-
+/*property: value;*/
 #home-intro{
     text-align: center;
-
-   /* border: 3px;
-    border-color: black;
-    border-style: solid;*/
     border: 3px solid black;
-
 }
 #home-intro :hover {
-
-   background-color: rgb(0, 221, 255);
+   background-color: burlywood;
 }
 #p1{
-    text-align: center;
     color: blue;
 }
 #nav{
@@ -29,7 +22,27 @@ h1{
 #nav a{
     margin: 0px 10px;
   /*  margin : y-axis x-axis;*/
-     text-decoration: none;
+    text-decoration: none;
     color: white;
    
+}
+#card{
+    align-items: center;
+    margin-top: 5px;
+    
+}
+#card-img{
+    width: 100px;
+    height: 100px;
+   align-items: center;
+   margin: 0px auto;
+  
+}
+#img{
+    width: 300px;
+    height: 200px;
+}
+#action{
+    text-align: center;
+    
 }
