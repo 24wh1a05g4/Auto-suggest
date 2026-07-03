@@ -15,12 +15,12 @@ h1{
 #nav{
     text-align: center;
     background-color: brown;
-    height: 30px;
+    height: 25px;
     padding-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 #nav a{
-    margin: 0px 10px;
+    margin: 0px 5px;
   /*  margin : y-axis x-axis;*/
     text-decoration: none;
     color: white;
@@ -32,15 +32,15 @@ h1{
     
 }
 #card-img{
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
    align-items: center;
    margin: 0px auto;
   
 }
 #img{
     width: 300px;
-    height: 200px;
+    height: 300px;
 }
 #action{
     text-align: center;
