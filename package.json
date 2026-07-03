@@ -2,7 +2,7 @@
   "name": "auto-suggest",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/24wh1a05g4/Auto-suggest/issues"
   },
-  "homepage": "https://github.com/24wh1a05g4/Auto-suggest#readme",
-  "dependencies": {
-    "express": "^5.2.1"
-  }
+  "homepage": "https://github.com/24wh1a05g4/Auto-suggest#readme"
 }
