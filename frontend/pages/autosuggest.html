@@ -36,6 +36,7 @@
             padding: 15px 15px 15px 45px;
             border-radius: 25px;
             width: 50%; 
+          
         }
         #suggestion-box{
             /*border:1px solid black;*/
@@ -43,6 +44,12 @@
             padding: 15px 15px 15px 45px;
             margin:0 auto;
             margin-left: 30%;
+            
+        }
+        #suggestion-item{
+            border: 1px solid #cccccc;
+            padding: 10px;
+            border-radius: 5px;
             
         }
     </style>
@@ -59,13 +66,47 @@
     <span>
        <span class="lens">&#128269;</span>
  
-      <input class="search-box" placeholder="Start typing to search phrases..." >
+      <input class="search-box" id="search-box" placeholder="Start typing to search phrases..." >
 
 </span>
 <div id="suggestion-box">
     <!-- Suggestions will appear here -->
 </div>
 </div>
+<script>
+    var searchBox = document.getElementById("search-box");
+    var suggestionBox = document.getElementById("suggestion-box");
+    searchBox.addEventListener("input", function() {
+      
+        var USER_INPUT = searchBox.value;
+        if(USER_INPUT.trim() === ""){
+            suggestionBox.innerHTML = "";
+            return;
+        }else{
+            var url = "https://autosuggest-backend.onrender.com/api/autosuggest?q=";
+            var url1 = "&algorithm=brute&limit=10&weighted=false";
+            var fullUrl = url + USER_INPUT + url1;
+            fetch(fullUrl)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                console.log(data);
+
+                var results = data.results;
+                var htmlresults = "";
+                for (var i = 0; i < results.length; i++)
+                 {
+                    htmlresults += "<div id='suggestion-item'>" + results[i].text + "</div>";
+                }
+                //var suggestionBox = document.getElementById("suggestion-box");
+                suggestionBox.innerHTML = htmlresults;
+        })
+    }
+});
+       
+
+</script>
 
 </body>
 </html>
